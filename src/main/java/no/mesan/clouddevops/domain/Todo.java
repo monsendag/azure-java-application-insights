@@ -15,6 +15,10 @@ public class Todo {
     private String content;
     private boolean done;
 
+    public Long getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
