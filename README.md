@@ -4,7 +4,7 @@ Java in azure with application insights
 Applikasjonen er veldig enkel. Det er en Todoliste. Den har et RESTful API, er laget med [Spring Boot] [spring-boot-url] og benytter en in-memory database.
 
 ###Det som trengs
-- [Java] [java-url] 1.6 eller nyere.
+- [Java 7] [java-url] eller nyere.
 - [Maven] [maven-url], følg installasjonsbeskrivelsen på nedlastingssiden.
 
 ###Kjør applikasjonen:
