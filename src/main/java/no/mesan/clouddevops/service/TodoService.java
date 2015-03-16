@@ -4,7 +4,12 @@ import no.mesan.clouddevops.domain.Todo;
 
 public interface TodoService {
 
-    Todo add(Todo todo);
-
     Iterable<Todo> getAll();
+
+    Todo create(Todo todo);
+
+    Todo update(Todo todo);
+
+    void delete(Long id);
+
 }

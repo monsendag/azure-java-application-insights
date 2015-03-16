@@ -12,12 +12,21 @@ public class TodoServiceImpl implements TodoService {
     private TodoRepository todoRepository;
 
     @Override
-    public Todo add(Todo todo) {
+    public Iterable<Todo> getAll() {
+        return todoRepository.findAll();
+    }
+
+    @Override
+    public Todo create(Todo todo) {
         return todoRepository.save(todo);
     }
 
     @Override
-    public Iterable<Todo> getAll() {
-        return todoRepository.findAll();
+    public Todo update(Todo todo) { return todoRepository.save(todo); }
+
+    @Override
+    public void delete(Long id) {
+        todoRepository.delete(id);
     }
+
 }
