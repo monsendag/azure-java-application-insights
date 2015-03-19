@@ -2,6 +2,9 @@ package no.mesan.clouddevops.rest;
 
 import no.mesan.clouddevops.domain.Todo;
 import no.mesan.clouddevops.service.TodoService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,12 +12,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/todo")
 public class TodoRestController {
 
+    final Logger logger = LoggerFactory.getLogger(TodoRestController.class);
+
     @Autowired
     private TodoService todoService;
 
     @RequestMapping(method = RequestMethod.GET)
     public Iterable<Todo> getAll() {
-        return todoService.getAll();
+        logger.info("getAll() called");
+        final Iterable<Todo> result = todoService.getAll();
+        logger.info("getAll() finished");
+        return result;
     }
 
     @RequestMapping(method = RequestMethod.POST)
