@@ -1,11 +1,9 @@
 package no.mesan.clouddevops.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "todos")
 public class Todo {
 
     @Id
@@ -13,7 +11,14 @@ public class Todo {
     private Long id;
     private String title;
     private String content;
-    private boolean done;
+    private boolean completed;
+
+    protected Todo() {
+    }
+
+    public Todo(String title) {
+        this.title = title;
+    }
 
     public Long getId() {
         return id;
@@ -35,11 +40,11 @@ public class Todo {
         this.content = content;
     }
 
-    public boolean isDone() {
-        return done;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setDone(boolean done) {
-        this.done = done;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }
