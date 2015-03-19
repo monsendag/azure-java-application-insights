@@ -83,11 +83,6 @@
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
         </repository>
-        <repository>
-            <id>central</id>
-            <name>Central</name>
-            <url>http://repo1.maven.org/maven2</url>
-        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
