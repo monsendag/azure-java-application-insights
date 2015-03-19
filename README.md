@@ -36,7 +36,7 @@ Forventet input:
       "id": 1,
       "title": title,
       "content": content,
-      "done": true
+      "completed": true
     }
 
 ####Slette en Todo
