@@ -42,13 +42,11 @@
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
@@ -61,7 +59,7 @@
         </dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
-            <artifactId>applicationinsights-logging-log4j2</artifactId>
+            <artifactId>applicationinsights-logging-logback</artifactId>
             <version>[0.9,)</version>
         </dependency>
     </dependencies>
