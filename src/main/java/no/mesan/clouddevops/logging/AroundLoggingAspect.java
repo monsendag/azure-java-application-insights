@@ -15,11 +15,11 @@ public class AroundLoggingAspect {
 
     @Around("execution(* no.mesan.clouddevops..*.*(..))")
     public Object aroundBeanMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        logger.info("Entering: " + proceedingJoinPoint);
+        logger.info("Calling " + proceedingJoinPoint);
 
         Object returnValue = proceedingJoinPoint.proceed();
 
-        logger.info("Completed: " + proceedingJoinPoint);
+        logger.info("Finished " + proceedingJoinPoint);
 
         return returnValue;
     }
