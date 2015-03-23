@@ -2,26 +2,15 @@
 
 <configuration>
 
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender" />
     <appender
-            name="aiAppender"
-            class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
-    </appender>
-
-    <appender
-            name="STDOUT"
-            class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
+        name="aiAppender"
+        class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
     </appender>
 
     <root level="trace">
-        <appender-ref ref="aiAppender"/>
+        <appender-ref ref="stdout" />
+        <appender-ref ref="aiAppender" />
     </root>
-
-    <root level="info">
-        <appender-ref ref="STDOUT"/>
-    </root>
-
 
 </configuration>
