@@ -24,7 +24,7 @@ Forventet input:
 
     {
       "title": "eksempeltittel",
-      "content": "beskrivelse for todo",
+      "content": "beskrivelse for todo"
     }
     
 ####Endre en Todo
