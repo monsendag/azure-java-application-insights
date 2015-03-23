@@ -29,4 +29,9 @@ angular.module('todomvc', ['ngRoute'])
 			.otherwise({
 				redirectTo: '/'
 			});
-	});
+	})
+    .run(function($rootScope) {
+        $rootScope.$on('$locationChangeStart', function(event) {
+            appInsights.trackPageView();
+        });
+    });

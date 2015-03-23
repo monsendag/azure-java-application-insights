@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/todo")
+@RequestMapping(value = "/api/todos")
 public class TodoRestController {
 
     final Logger logger = LoggerFactory.getLogger(TodoRestController.class);
