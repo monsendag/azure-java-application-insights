@@ -11,10 +11,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 @Aspect
 @Component
 public class AroundLoggingAspect {
+
+    private TelemetryClient telemetry = new TelemetryClient();
 
     @Around("execution(* no.mesan.clouddevops..*(..))")
     public Object aroundBeanMethods(ProceedingJoinPoint pjp) throws Throwable {
@@ -54,6 +58,15 @@ public class AroundLoggingAspect {
             String params = String.format("Arguments: %s", arguments.toString());
             String logStr = String.format("%s() duration: %dms arguments: %s %s", methodName, sw.getTotalTimeMillis(), params, output);
             log.info(logStr);
+
+            // custom telemetry
+            Map<String, String> properties = new HashMap<String, String>();
+            Map<String, Double> metrics = new HashMap<String, Double>();
+
+            properties.put("methodName", methodName);
+            metrics.put("processingTime", (double)sw.getLastTaskTimeMillis());
+            telemetry.trackEvent("Metodekall", properties, metrics);
+
         }
 
         return result;
