@@ -6,7 +6,11 @@
             <pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
+
     <appender name="stderr" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
         <target>System.err</target>
     </appender>
 
@@ -15,8 +19,7 @@
             class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
     </appender>
 
-
-    <logger name="no.mesan.clouddevops" level="INFO" />
+    <logger name="no.mesan.clouddevops" level="INFO"/>
 
     <root level="WARN">
         <appender-ref ref="STDOUT"/>
