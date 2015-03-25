@@ -89,6 +89,56 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>deployazure</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.8</version>
+                        <executions>
+                            <execution>
+                                <id>ftp</id>
+                                <phase>install</phase>
+                                <configuration>
+                                    <target>
+                                        <ftp action="send"
+                                             server="waws-prod-db3-023.ftp.azurewebsites.windows.net"
+                                             remotedir="/site/wwwroot/webapps"
+                                             userid="${ftp_user}"
+                                             password="${ftp_password}"
+                                             depends="yes"
+                                             verbose="yes">
+                                            <fileset dir="${basedir}/target">
+                                                <include name="${project.build.finalName}.war"/>
+                                            </fileset>
+                                        </ftp>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>commons-net</groupId>
+                                <artifactId>commons-net</artifactId>
+                                <version>1.4.1</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant-commons-net</artifactId>
+                                <version>1.8.1</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <repositories>
         <repository>
             <id>in-project</id>
