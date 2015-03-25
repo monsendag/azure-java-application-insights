@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration>
-
-    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender" />
-    <appender
-        name="aiAppender"
-        class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="stderr" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
     </appender>
 
-    <root level="trace">
-        <appender-ref ref="stdout" />
-        <appender-ref ref="aiAppender" />
+    <appender
+            name="aiAppender"
+            class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
+    </appender>
+
+
+    <logger name="no.mesan.clouddevops" level="INFO" />
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="aiAppender"/>
     </root>
 
 </configuration>
