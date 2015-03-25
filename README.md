@@ -45,6 +45,10 @@ Forventet input:
 ####Slette en Todo
 URL: localhost:8080/todo/{id_for_todo} (DELETE)
 
+###Fremprovosere exception
+Denne brukes for enkelt å få en stack trace og se hvordan det logges i Azure.
+
+URL: localhost:8080/api/throwexception (GET)
 
 [java-url]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [maven-url]: http://maven.apache.org/
