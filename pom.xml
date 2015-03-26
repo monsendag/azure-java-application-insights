@@ -104,7 +104,7 @@
                                 <configuration>
                                     <target>
                                         <ftp action="send"
-                                             server="waws-prod-db3-023.ftp.azurewebsites.windows.net"
+                                             server="${ftp_host}"
                                              remotedir="/site/wwwroot/webapps"
                                              userid="${ftp_user}"
                                              password="${ftp_password}"

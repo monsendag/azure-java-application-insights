@@ -51,7 +51,7 @@ Denne brukes for enkelt å få en stack trace og se hvordan det logges i Azure.
 URL: localhost:8080/api/throwexception (GET)
 
 ###Deploy til Microsoft Azure‎ med Maven
-`mvn clean install -P deployazure -Dftp_user="brukernavn" -Dftp_password="passord"`
+`mvn clean install -P deployazure -Dftp_host="host" -Dftp_user="brukernavn" -Dftp_password="passord"`
 
 Merk fnuttene (") rundt brukernavn og passord. De er nødvendig for å slippe escaping.
 
