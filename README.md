@@ -53,7 +53,7 @@ URL: localhost:8080/api/throwexception (GET)
 ###Deploy til Microsoft Azure‎ med Maven
 `mvn clean install -P deployazure -Dftp_user="brukernavn" -Dftp_password="passord"`
 
-Merk fnuttene(") rundt brukernavn og passord. De er nødvendig for å slippe escaping.
+Merk fnuttene (") rundt brukernavn og passord. De er nødvendig for å slippe escaping.
 
 [java-url]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [maven-url]: http://maven.apache.org/
