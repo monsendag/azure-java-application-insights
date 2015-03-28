@@ -7,9 +7,6 @@ Applikasjonen er veldig enkel. Det er en Todoliste. Den har et RESTful API, er l
 - [Java 7] [java-url] eller nyere.
 - [Maven] [maven-url], følg installasjonsbeskrivelsen på nedlastingssiden.
 
-###Installer Microsoft JDBC Driver for SQL Server i lokalt repository
-`mvn install:install-file -Dfile=3rd-party-jars/sqljdbc4-4.0.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar`
-
 ###Kjør applikasjonen:
 - fra kommandolinja med kommandoen: `mvn spring-boot:run`
 - fra IDE ved å kjøre TodoApplication.java som inneholder main metoden.
@@ -51,7 +48,7 @@ Denne brukes for enkelt å få en stack trace og se hvordan det logges i Azure.
 URL: localhost:8080/api/throwexception (GET)
 
 ###Deploy til Microsoft Azure‎ med Maven
-`mvn clean install -P deployazure -Dftp_host="host" -Dftp_user="brukernavn" -Dftp_password="passord"`
+`mvn clean install -P deployazure -Dftp_host="host" -Dftp_user="ftpuser" -Dftp_password="pw" -Ddb_user="dbuser" -Ddb_password="pw"`
 
 Merk fnuttene (") rundt brukernavn og passord. De er nødvendig for å slippe escaping.
 
