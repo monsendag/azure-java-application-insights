@@ -95,7 +95,7 @@
                         <executions>
                             <execution>
                                 <id>ftp</id>
-                                <phase>install</phase>
+                                <phase>package</phase>
                                 <configuration>
                                     <target>
                                         <ftp action="send"
