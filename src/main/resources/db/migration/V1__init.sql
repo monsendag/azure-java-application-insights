@@ -1,7 +1,7 @@
 CREATE TABLE todos (
-  id        INT(6)      NOT NULL               AUTO_INCREMENT,
+  id        INT         NOT NULL               IDENTITY (1, 1),
   title     VARCHAR(60) NOT NULL,
   content   VARCHAR(600),
-  completed BOOLEAN     NOT NULL               DEFAULT FALSE,
+  completed BIT         NOT NULL               DEFAULT 0,
   CONSTRAINT todo_pk PRIMARY KEY (id)
 );
