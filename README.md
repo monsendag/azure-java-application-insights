@@ -58,8 +58,8 @@ URL: localhost:8080/api/throwexception (GET)
 ###Miljøvariabler som må være på plass i Tomcat i Azure
 Miljøvariabler kan settes to steder:
 
-- [Azure portalen (ny)] [azure-portal-url] under "Web Apps" -> \<APPLIKASJON\> -> "All settings" -> "Application settings" -> "App settings".
-- [Azure manage (gammel)] [azure-manage-url] under "Web apps" -> \<APPLIKASJON\> -> "CONFIGURE" -> "app settings".
+- [Azure portalen (preview)] [azure-portal-url] under "Web Apps" -> \<APPLIKASJON\> -> "All settings" -> "Application settings" -> "App settings".
+- [Azure manage (stabil)] [azure-manage-url] under "Web apps" -> \<APPLIKASJON\> -> "CONFIGURE" -> "app settings".
 
 Miljøvariablene:
 
