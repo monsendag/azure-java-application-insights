@@ -14,8 +14,11 @@ Applikasjonen er veldig enkel. Det er en Todoliste. Den har et RESTful API, er l
 `mvn install:install-file -Dfile=lib/sqljdbc_4.1/sqljdbc41.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc41 -Dversion=4.1 -Dpackaging=jar`
 
 ###Kjør applikasjonen lokalt:
-- fra kommandolinja med kommandoen: `mvn spring-boot:run`
+Applikasjonen må kjøres med en Spring profil
+
+- fra kommandolinja med kommandoen: `mvn spring-boot:run -Dspring.profiles.active=development`
 - fra IDE ved å kjøre TodoApplication.java som inneholder main metoden.
+    - Legg til '--spring.profiles.active=development' som program arguments i launcher.
 
 Under oppstart så kjøres schema-h2.sql og data-h2.sql som populerer data for lokal utvikling.
 
