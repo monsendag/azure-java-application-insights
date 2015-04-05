@@ -100,7 +100,7 @@
                         <version>2.6</version>
                         <configuration>
                             <!-- Fjerner utviklingsfiler fra WAR-fila som deployes til Azure-->
-                            <packagingExcludes>**/*-h2.sql,**/application.properties</packagingExcludes>
+                            <packagingExcludes>**/*-h2.sql</packagingExcludes>
                         </configuration>
                     </plugin>
                     <plugin>

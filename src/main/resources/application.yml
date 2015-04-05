@@ -1,0 +1,20 @@
+---
+spring:
+  profiles: development
+  #Lagt til for at ikke Hibernates schema export overskriver initialiseringen av H2
+  jpa.hibernate.ddl-auto: none
+  #Brukes for å identifisere platform for filene schema.sql og data.sql
+  datasource.platform: h2
+#Disabler Flyway migrering for in-memory DB
+flyway.enabled: false
+---
+#Placeholdere blir resolvet av Spring ved deployment
+#Verdiene hentes fra miljøvariabler satt i Azure. Se README.md for mer info
+spring:
+  profiles: production
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+---
