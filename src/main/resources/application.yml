@@ -8,7 +8,7 @@ spring:
 #Disabler Flyway migrering for in-memory DB
 flyway.enabled: false
 ---
-#Placeholdere blir resolvet av Spring ved deployment
+#Placeholdere resolves av Spring runtime
 #Verdiene hentes fra miljøvariabler satt i Azure. Se README.md for mer info
 spring:
   profiles: production

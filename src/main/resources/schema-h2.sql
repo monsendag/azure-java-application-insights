@@ -1,7 +1,7 @@
 /*
 ---DEVELOPMENT---
-SQL init som kun brukes til utvikling på localhost.
-DB scripts som brukes av Flyway for produksjon ligger i scr/main/resources/db/migration
+SQL init som brukes når applikasjonen benytter Spring profile 'development', typisk til utvikling på localhost.
+DB scripts som brukes av Flyway for Spring profile 'production' ligger i scr/main/resources/db/migration
  */
 CREATE TABLE todos (
   id        INT(6)      NOT NULL               AUTO_INCREMENT,

@@ -1,7 +1,7 @@
 /*
 ---DEVELOPMENT---
-Data som kun brukes til utvikling på localhost.
-DB scripts som brukes av Flyway for produksjon ligger i scr/main/resources/db/migration
+Data som kun brukes når applikasjonen benytter Spring profile 'development', typisk til utvikling på localhost.
+DB scripts som brukes av Flyway for Spring profile 'production' ligger i scr/main/resources/db/migration
  */
 
 INSERT INTO todos (id, title, content)
