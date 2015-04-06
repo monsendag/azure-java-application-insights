@@ -13,17 +13,21 @@ Applikasjonen er veldig enkel. Det er en Todoliste. Den har et RESTful API, er l
 ######Installer Microsoft JDBC Driver for SQL Server i lokalt repository
 `mvn install:install-file -Dfile=lib/sqljdbc_4.1/sqljdbc41.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc41 -Dversion=4.1 -Dpackaging=jar`
 
-###Kjør applikasjonen lokalt:
-Applikasjonen må kjøres med en Spring profil
+###Spring profiles
+Applikasjonen må kjøres med én Spring profil. Det er to profiler:
 
-- fra kommandolinja med kommandoen: `mvn spring-boot:run -Dspring.profiles.active=development`
+- development, benytter H2 in-memory database
+- production, benytter SQL Server. Krever at noen miljøvariabler er satt. Se avsnitt om miljøvariabler under.
+
+###Kjør applikasjonen lokalt:
+- fra kommandolinja med kommandoen: `mvn spring-boot:run -Dspring.profiles.active=<SPRING_PROFILE>`
 - fra IDE ved å kjøre TodoApplication.java som inneholder main metoden.
-    - Legg til '--spring.profiles.active=development' som program arguments i launcher.
+    - Legg til '--spring.profiles.active=\<SPRING_PROFILE\>' som program arguments i launcher.
 
 Under oppstart så kjøres schema-h2.sql og data-h2.sql som populerer data for lokal utvikling.
 
 ###Hva applikasjonen kan gjøre
-Da det ikke er noe GUI så benytt gjerne en REST-klient. Det gjør lagring av data enklere.
+Hvis du ikke ønsker å benytte GUI-et for å teste API-et så benytt gjerne en REST-klient. Det gjør lagring og oppdatering av data enklere.
 
 ####List alle Todos
 URL: localhost:8080/todo (GET)
