@@ -70,7 +70,7 @@ Miljøvariabler kan settes to steder:
 
 Miljøvariablene:
 
-- SPRING_PROFILES_ACTIVE=production
+- SPRING_PROFILES_ACTIVE=\<SPRING_PROFILE\>, typisk så vil denne ha 'production'
 - DATASOURCE_URL=\<full connection string\>, på formen: jdbc:sqlserver://\<HOST\>:\<PORT\>;database=\<DATABASE\>;loginTimeout=30;
 - DB_USER=\<brukernavn\>
 - DB_PASSWORD=\<passord\>
