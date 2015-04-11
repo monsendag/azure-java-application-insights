@@ -26,6 +26,16 @@ Applikasjonen må kjøres med én Spring profil. Det er to profiler:
 
 Under oppstart så kjøres schema-h2.sql og data-h2.sql som populerer data for lokal utvikling.
 
+###H2 in-memory database
+Dersom du ønsker å koble til H2 databasen utenfor Javakoden så kan konsollet nås på URL-en localhost:8080/h2console
+
+Login skal ha følgende verdier:
+
+- **Driver Class:** org.h2.Driver
+- **JDBC URL:** jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+- **User Name:** sa
+- **Password:** \<blank\>
+
 ###Hva applikasjonen kan gjøre
 Hvis du ikke ønsker å benytte GUI-et for å teste API-et så benytt gjerne en REST-klient. Det gjør lagring og oppdatering av data enklere.
 
