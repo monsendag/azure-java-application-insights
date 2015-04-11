@@ -40,10 +40,10 @@ Login skal ha følgende verdier:
 Hvis du ikke ønsker å benytte GUI-et for å teste API-et så benytt gjerne en REST-klient. Det gjør lagring og oppdatering av data enklere.
 
 ####List alle Todos
-URL: localhost:8080/todo (GET)
+URL: localhost:8080/api/todos (GET)
 
 ####Legg til en Todo
-URL: localhost:8080/todo (POST)
+URL: localhost:8080/api/todos (POST)
 
 Forventet input:
 
@@ -53,7 +53,7 @@ Forventet input:
     }
     
 ####Endre en Todo
-URL: localhost:8080/todo (PUT)
+URL: localhost:8080/api/todos (PUT)
 
 Forventet input:
 
@@ -65,7 +65,7 @@ Forventet input:
     }
 
 ####Slette en Todo
-URL: localhost:8080/todo/{id_for_todo} (DELETE)
+URL: localhost:8080/api/todos/{id_for_todo} (DELETE)
 
 ####Fremprovosere exception
 Denne brukes for enkelt å få en stack trace og se hvordan det logges i Azure.
