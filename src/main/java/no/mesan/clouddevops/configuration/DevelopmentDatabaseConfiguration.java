@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @Profile("development")
-public class DevelopmentDatabase {
+public class DevelopmentDatabaseConfiguration {
 
     @Bean
     public ServletRegistrationBean h2ServletRegistration() {

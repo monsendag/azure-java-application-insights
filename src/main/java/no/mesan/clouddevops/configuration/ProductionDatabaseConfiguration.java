@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @Profile("production")
-public class ProductionDatabaseDataSource {
+public class ProductionDatabaseConfiguration {
 
     @Bean
     @Autowired
