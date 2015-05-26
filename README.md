@@ -6,10 +6,6 @@ Applikasjonen er veldig enkel. Det er en Todoliste. Den har et RESTful API, er l
 ###Det som trengs
 - [Java 7] [java-url] eller nyere.
 - [Maven] [maven-url], følg installasjonsbeskrivelsen på nedlastingssiden.
-- Microsoft JDBC Driver for SQL Server. Se neste punkt.
-
-######Installer Microsoft JDBC Driver for SQL Server i lokalt repository
-`mvn install:install-file -Dfile=lib/sqljdbc_4.1/sqljdbc41.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc41 -Dversion=4.1 -Dpackaging=jar`
 
 ###Kjør applikasjonen:
 - fra kommandolinja med kommandoen: `mvn spring-boot:run`
